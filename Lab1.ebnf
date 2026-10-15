@@ -51,11 +51,11 @@ Lexic
 		separatori {} ;
 	b) identificatory
 		identificatory ::= litera | litera{cifra}{litera}
-		litera ::= "A" | "B" | ... | "Z"
+		litera ::= "A" | "B" | ... | "Z" | "a" | "b" | ... | "z"
 		cifra ::= "0" | "1" | ... | "9"
 	c) constante
 		1)	const ::=numar|-numar|+numar
-			numar ::=cifra{numar}
+			numar ::=cifra{cifra}
 		2)	char ::= "litera"|"cifra"
 		3) 	string 
 				constCaracter ::= "string"
@@ -70,7 +70,7 @@ lista_declaratii ::= tip_date Identificator ";" {tip_date Identificator ";"}
 list_instrunctuini ::= instructiune{instructiunin}
 instructiuni ::= declaratie | atribuiri | io | conditionala | ciclire
 decalratie ::= tip_date Identificator ";" | decl_vector ";" | decl_struct ";"
-variabila ::= Identificator | Identificator "[" "]"
+variabila ::= Identificator | Identificator "[" expresie "]"
 atribuiri ::= variabila "=" expresie ";"
 expresie ::= termen { ("+" | "-" | "<<" | ">>") termen }
 termen ::= factor { ("*" | "/" | "%" | "^") factor }
@@ -81,6 +81,8 @@ ciclare ::= "while" "(" conditie ")" "{" list_instructiuni "}"
 conditie ::= expresie relatie expresie
 relatie ::= "<" | "<=" | "==" | "!=" | ">=" | ">"
 return_instr ::= "return" expresie ";"
+
+Identificator ::= litera | litera{litera}{cifra}
 
 	
 	
