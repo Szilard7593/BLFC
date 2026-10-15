@@ -1,0 +1,86 @@
+limbaj C
+
+int main() {
+    int a;
+    int b;
+
+    read(a);
+    read(b);
+
+    while (a != b) {
+        if (a > b) {
+            a = a - b;
+        } else {
+            b = b - a;
+        }
+    }
+
+    print(a);
+    return 0;
+}
+
+int main() {
+    int n;
+    int i;
+    int suma;
+    int v[10];
+
+    read(n);
+    i = 0;
+    suma = 0;
+
+    while (i < n) {
+        read(v[i]);
+        suma = suma + v[i];
+        i = i + 1;
+    }
+
+    print(suma);
+    return 0;
+}
+
+
+Definirea limbajului:
+	literele mari si mici ale alfabetului englez
+	cifrele zecimale
+	caracterul '_'
+
+Lexic
+	a) simboluri speciale
+		operatori +-=^%<<>> > <
+		separatori {} ;
+	b) identificatory
+		identificatory ::= litera | litera{cifra}{litera}
+		litera ::= "A" | "B" | ... | "Z"
+		cifra ::= "0" | "1" | ... | "9"
+	c) constante
+		1)	const ::=numar|-numar|+numar
+			numar ::=cifra{numar}
+		2)	char ::= "litera"|"cifra"
+		3) 	string 
+				constCaracter ::= "string"
+				string ::=char{string}
+				char ::= litera|cifra
+ 	
+program ::= "int main()"  "{"{list_instructiuni}"}"
+tip_date ::= "int" | "float" | "char" + cel de la utilizator array sau vector
+decl_vector ::= tip_date Identificator "[" numar "]"
+decl_struct ::= "struct" Identificator "{" lista_declaratii "}"
+lista_declaratii ::= tip_date Identificator ";" {tip_date Identificator ";"}
+list_instrunctuini ::= instructiune{instructiunin}
+instructiuni ::= declaratie | atribuiri | io | conditionala | ciclire
+decalratie ::= tip_date Identificator ";" | decl_vector ";" | decl_struct ";"
+variabila ::= Identificator | Identificator "[" "]"
+atribuiri ::= variabila "=" expresie ";"
+expresie ::= termen { ("+" | "-" | "<<" | ">>") termen }
+termen ::= factor { ("*" | "/" | "%" | "^") factor }
+factor ::= variabila | const | char | constCaracter | "(" expresie ")"
+io ::= "read" "(" variabila ")" ";" | "print" "(" expresie ")" ";"
+conditionala ::= "if" "(" conditie ")" "{" list_instructiuni "}" [ "else" "{" list_instructiuni "}" ]
+ciclare ::= "while" "(" conditie ")" "{" list_instructiuni "}"
+conditie ::= expresie relatie expresie
+relatie ::= "<" | "<=" | "==" | "!=" | ">=" | ">"
+return_instr ::= "return" expresie ";"
+
+	
+	
