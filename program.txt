@@ -1,0 +1,16 @@
+int main() {
+    int n;
+    int contor;
+    float elem;
+    float suma;
+    read(n);
+    contor = 1;
+    suma = 0;
+    while (contor<=n) {
+        read(elem);
+        suma = suma + elem;
+        contor = contor + 1;
+    }
+    print(suma);
+    return 0;
+}
