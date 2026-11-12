@@ -1,0 +1,8 @@
+q0 q1 q2
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789
+q0
+q1 q2
+q0 q1 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+q1 q1 ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz
+q1 q2 0123456789
+q2 q2 0123456789
